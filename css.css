@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffcccc;
+    background-image: linear-gradient(45deg, #ffcccc, #ffe6e6);
+    text-align: center;
+}
+h1 {
+    font-size: 2em;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Media Query para dispositivos móveis */
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#present-container {
+    width: 180px;
+    height: 180px;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    transition: opacity 0.5s ease;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+
+.part {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background-color: #e74c3c;
+    border-radius: 10px;
+    transition: transform 0.7s ease;
+}
+
+#lid {
+    top: 0;
+    height: 60px;
+    z-index: 2;
+    background-color: #e74c3c;
+}
+
+#box {
+    top: 60px;
+    height: 120px;
+    z-index: 1;
+    background-color: #e74c3c;
+}
+
+.ribbon {
+    position: absolute;
+    background-color: #fff;
+    z-index: 3;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#ribbon-vertical {
+    width: 20px;
+    height: 180px;
+    left: 80px;
+}
+
+#ribbon-horizontal {
+    width: 180px;
+    height: 20px;
+    top: 80px;
+}
+
+#message {
+    zoom: 50%;
+  margin-bottom: 200px;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+#message h1 {
+    font-size: 2.5em;
+    color: #ff6b6b;
+}
+
+#message p {
+    font-size: 1.5em;
+    color: #333;
+}
+
+#gif-container img {
+    width: 200px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+#gif-container img:hover {
+    transform: scale(1.05);
+}
+
+.hidden {
+    visibility: hidden;
+}
